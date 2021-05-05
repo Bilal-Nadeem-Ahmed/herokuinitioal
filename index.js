@@ -79,7 +79,7 @@ app.put('/api/notes/:id',(request,response)=>{
     important: body.important ,
     date: body.date
   }
-  notes.map(item=>item.id===note.id? note:item)
+  notes.filter(item=>item.id===note.id? note:item)
   // console.log(notes)
   
   response.json(note)
